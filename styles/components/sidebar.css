@@ -18,7 +18,7 @@
 }
 
 .works-sidebar {
-  width: 12rem;
+  width: 10rem;
   flex-shrink: 0;
   position: sticky;
   top: 5.25rem;
@@ -27,7 +27,7 @@
 }
 @media (max-width: 64rem) {
   .works-sidebar {
-    width: 12rem;
+    width: 10rem;
   }
 }
 @media (max-width: 48rem) {
@@ -94,6 +94,7 @@
 }
 .category-item.active .arrow-svg {
   display: inline-block;
+  flex-shrink: 0;
 }
 .category-item.active .arrow-svg path {
   fill: oklab(71.115% -0.08935 -0.11425);

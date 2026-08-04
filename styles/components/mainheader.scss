@@ -76,15 +76,65 @@
   padding-right: 0;
 }
 
-// ⭕ 기존 파일 맨 밑의 @media 블록 전체를 이 코드로 덮어씌웁니다!
 @media (max-width: 64rem) {
   .site-mainheader {
+     // 💡 1. 햄버거 버튼 뿅! 나타나게 하기
+    .menu-toggle-btn {
+      display: block; // PC에서 숨겼던 햄버거 꺼내기
+    }
+
+    // 💡 2. 모바일용 드롭다운 메뉴판 세팅 (페이지 헤더와 100% 동일)
+    .nav-list {
+      display: none; // 🔒 일단 안 보이게 싹 감춰둡니다!
+
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+
+      left: 0;
+      width: 100%;
+      
+      
+      background-color: #ffffff;
+      padding: 0 0 1rem 0;
+      border-bottom: 2px solid oklab(71.115% -0.08935 -0.11425);
+      z-index: 999;
+
+      align-items: stretch;
+
+      // 🔓 JS가 'is-active' 이름표를 붙여주면 열립니다!
+      &.is-active {
+        display: block;
+        width: 100%;
+      }
+
+      a {
+        padding: 0.5rem 0;
+        width: 100%;
+        font-size: 1.5rem;
+
+        text-align: center;
+      }
+
+      li:first-child a {
+        padding-top: 0; 
+      }
+    }
+  }
+}
+
+@media (max-width: 48rem) {
+  .site-mainheader {
     // 기존 column(세로 나열) 속성을 지우고, 원래대로 양옆 정렬을 유지합니다.
-    flex-direction: row; 
+    flex-direction: row;
     align-items: center;
     height: 5.25rem;         // 헤더 높이 고정
-    padding: 1.25rem 1.5rem; // 페이지 헤더와 동일한 패딩 적용
-    position: relative;      // 💡 드롭다운 메뉴가 매달릴 기준점!
+    padding: 1.25rem 1.5rem; // 페이지 헤더와 동일한 패딩 적용   
+    
+    position: sticky;
+    top: 0;
+    background-color: #ffffff; // 👈 스크롤 시 뒤쪽 본문이 비치지 않도록 흰색 마킹
+    z-index: 1000;// 💡 드롭다운 메뉴가 매달릴 기준점!
 
     .logo {
       margin-bottom: 0; // 예전에 줬던 로고 아래 여백 리셋

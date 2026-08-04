@@ -17,7 +17,7 @@
 }
 
 .works-sidebar {
-  width: 12rem;
+  width: 10rem;
   flex-shrink: 0;
   position: sticky;
   top: 5.25rem;
@@ -25,7 +25,7 @@
   padding: 0;
 
   @media (max-width: 64rem) {
-    width: 12rem;
+    width: 10rem;
   }
 
   @media (max-width: 48rem) {
@@ -98,6 +98,7 @@
 
     .arrow-svg {
       display: inline-block;
+      flex-shrink: 0;
       path {
         fill: oklab(71.115% -0.08935 -0.11425);
       }
