@@ -252,7 +252,7 @@ const designersData = [
 const globalWorksData = [
   { 
     id: 1, 
-    category: "미디어",
+    category: "미디어아트",
     title: "weave", 
     thumbnail: "썸네일경로.jpg",
     description: "weave는 연결 인류 디바이스 weaving을 통해 타인과 진정한 정서적 연결의 순간을 만듭니다. 직물을 직조하는 것처럼 인간과 인간의 내면은 촘촘하게 연결되며, 인류는 새로운 소통 방식을 마주합니다. 연결의 순간 확장되는 유기적인 내면의 흐름을 시각화합니다.", 
@@ -288,7 +288,7 @@ const globalWorksData = [
   }
   ,{
     id: 5, 
-    category: "미디어",
+    category: "미디어아트",
     title: "MODIKIT", 
     thumbnail: "썸네일경로.jpg",
     description: "", 
@@ -396,7 +396,7 @@ const globalWorksData = [
   }
   ,{
     id: 17, 
-    category: "미디어",
+    category: "미디어아트",
     title: "쌀콩밀", 
     thumbnail: "썸네일경로.jpg",
     description: "", 
@@ -414,7 +414,7 @@ const globalWorksData = [
   }
   ,{
     id: 19, 
-    category: "미디어",
+    category: "미디어아트",
     title: "RUNTIME", 
     thumbnail: "썸네일경로.jpg",
     description: "", 
