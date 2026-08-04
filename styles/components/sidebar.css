@@ -18,7 +18,7 @@
 }
 
 .works-sidebar {
-  width: 11rem;
+  width: 12rem;
   flex-shrink: 0;
   position: sticky;
   top: 5.25rem;
@@ -27,7 +27,7 @@
 }
 @media (max-width: 64rem) {
   .works-sidebar {
-    width: 11rem;
+    width: 12rem;
   }
 }
 @media (max-width: 48rem) {
