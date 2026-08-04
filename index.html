@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2026ARVRMD</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link rel="stylesheet" href="./styles/home.css" />
+  </head>
+  
+ <body class="page-home">
+    <header class="site-mainheader">
+      <div class="logo">
+        <a href="index.html">
+          2026 상명대학교<br />AR·VR미디어디자인전공 졸업작품전시
+        </a>
+      </div>
+
+      <nav class="nav">
+        <button type="button" class="menu-toggle-btn">
+          <img src="/asset/icons/menu.svg" alt="메뉴 열기" />
+        </button>
+
+        <ul class="nav-list">
+          <li><a href="pages/About/About.html" class="nav-About">About</a></li>
+          <li><a href="pages/Works/Works.html" class="nav-Works">Works</a></li>
+          <li>
+            <a
+              href="pages/Designers/Designers.html"
+              class="nav-Designers"
+              >Designers</a
+            >
+          </li>
+          <li>
+            <a href="pages/Archive/Archive.html" class="nav-Archive">Archive</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="home-main-section">
+      <div id="lottie-container"></div>
+
+      <div class="typing-bar-wrapper">
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
+    <script>
+      const menuBtn = document.querySelector(".menu-toggle-btn");
+      const navList = document.querySelector(".nav-list");
+
+      menuBtn.addEventListener("click", () => {
+        navList.classList.toggle("is-active");
+      });
+
+       
+    </script>
+
+    <script>
+      // DOM(화면)이 로드되면 Lottie 모션 실행
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("lottie-container");
+
+  if (container) {
+    const animation = lottie.loadAnimation({
+      container: container, // 모션을 띄울 HTML 상자
+      renderer: "svg",      // 화질이 절대 안 깨지는 벡터 SVG 방식
+      loop: true,           // ♾️ 무한 루프 켜기 (핵심!)
+      autoplay: true,       // 자동 재생
+      path: "./asset/motion/RPSLine.json", // 👈 JSON 파일 실제 경로와 맞는지 확인!
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMin slice",
+      },
+    });
+
+    // (선택) 모션 로딩 완료 확인용 콘솔 로그
+    animation.addEventListener("DOMLoaded", () => {
+      console.log("🚀 메인 홈 사이드 스크롤 모션 로딩 완료!");
+    });
+  }
+});
+    </script>
+
+    </body>
+</html>

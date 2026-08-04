@@ -1,0 +1,15 @@
+@use "../global/config";
+@use "sass:math";
+
+.wrapper {
+  --p-x: var(--wrapper-padding, var(--space-s-3xl, 1rem));
+
+  position: relative;
+  box-sizing: content-box;
+  max-inline-size: min(
+    calc(100% - 2 * var(--p-x)),
+    var(--wrapper-max-width, var(--max-content-width, 100rem))
+  );
+  padding-inline: var(--p-x);
+  margin-inline: auto;
+}

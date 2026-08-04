@@ -1,0 +1,49 @@
+.link {
+  width: 100%;
+}
+
+.link ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  color: azure;
+  font-family: "MuseumClassicMedium", serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+.link ul a {
+  display: block; //줄 전체 배경 더 메뉴 버튼 느낌
+
+  background-color: transparent; //배경을 투명으로 지정, hover 시 변경될 수 있음
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.link ul a:hover {
+  background-color: oklch(0.9555 0.1492 105.2);
+  color: oklch(0.6808 0.1923 251.83);
+}
+
+.link li {
+  width: 100%;
+  border-bottom: 0.125rem solid oklch(0.9555 0.1492 105.2);
+}
+
+.link li:first-child {
+  border-top: 0.125rem solid oklch(0.9555 0.1492 105.2);
+}
+
+.link li a {
+  display: flex;
+  align-items: center; //flex 세로정렬
+  justify-content: center; //flex 가로정렬
+
+  max-inline-size: var(--wrapper-max-width, 120rem);
+  margin-inline: auto; //폭 내에서 가운데 정렬
+  padding: 1rem 1.375rem;
+
+  text-align: center; //텍스트 줄 내부 정렬
+}
+
+// li=레이아웃(선,행), a=콘텐츠(텍스트,클릭영역)

@@ -1,0 +1,259 @@
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+@use '../utilities/perceptone' as perceptone;
+
+$surface: (
+  'configs': (
+    (
+      'semanticName': 'surface',
+      'toneName': 'neutral'
+    )
+  ),
+  'pairs': (
+    (
+      'stepPair': (
+        98,
+        4
+      )
+    ),
+    (
+      'prefix': 'on',
+      'stepPair': (
+        4,
+        98
+      )
+    ),
+    (
+      'prefix': 'on',
+      'suffix': 'variant',
+      'stepPair': (
+        24,
+        78
+      )
+    ),
+    (
+      'suffix': '1',
+      'stepPair': (
+        100,
+        2
+      )
+    ),
+    (
+      'suffix': '2',
+      'stepPair': (
+        96,
+        6
+      )
+    ),
+    (
+      'suffix': '3',
+      'stepPair': (
+        94,
+        8
+      )
+    ),
+    (
+      'suffix': '4',
+      'stepPair': (
+        92,
+        10
+      )
+    ),
+    (
+      'suffix': '5',
+      'stepPair': (
+        90,
+        12
+      )
+    )
+  )
+);
+$outline: (
+  'configs': (
+    (
+      'semanticName': 'outline',
+      'toneName': 'neutral'
+    )
+  ),
+  'pairs': (
+    (
+      'stepPair': (
+        50,
+        52
+      )
+    ),
+    (
+      'suffix': 'variant',
+      'stepPair': (
+        80,
+        22
+      )
+    )
+  )
+);
+$chromatics: (
+  'configs': (
+    (
+      'semanticName': 'primary',
+      'toneName': 'red'
+    ),
+    (
+      'semanticName': 'secondary',
+      'toneName': 'green'
+    ),
+    (
+      'semanticName': 'tertiary',
+      'toneName': 'blue'
+    )
+  ),
+  'pairs': (
+    (
+      'stepPair': (
+        40,
+        62
+      )
+    ),
+    (
+      'prefix': 'on',
+      'stepPair': (
+        100,
+        2
+      )
+    ),
+    (
+      'suffix': 'container',
+      'stepPair': (
+        90,
+        12
+      )
+    ),
+    (
+      'prefix': 'on',
+      'suffix': 'container',
+      'stepPair': (
+        30,
+        72
+      )
+    )
+  )
+);
+
+@mixin generateSematicTones($tones) {
+  $configs: map.get($tones, 'configs');
+  $pairs: map.get($tones, 'pairs');
+  $config-type: meta.type-of($configs);
+  $pairs-type: meta.type-of($pairs);
+
+  @if $config-type != 'list' {
+    $semantic-name: list.nth(list.nth($configs, 1), 2);
+    $tone-name: list.nth(list.nth($configs, 2), 2);
+
+    @each $a-pair in $pairs {
+      $prefix: map.get($a-pair, 'prefix');
+
+      @if not $prefix {
+        $prefix: '';
+      }
+
+      $suffix: map.get($a-pair, 'suffix');
+
+      @if not $suffix {
+        $suffix: '';
+      }
+
+      $step-pair: map.get($a-pair, 'stepPair');
+      $light-tone-step: list.nth($step-pair, 1);
+      $dark-tone-step: list.nth($step-pair, 2);
+      $variable-name: #{$semantic-name};
+
+      @if $prefix != '' {
+        $variable-name: #{$prefix}-#{$variable-name};
+      }
+
+      @if $suffix != '' {
+        $variable-name: #{$variable-name}-#{$suffix};
+      }
+
+      $variable-name: --#{$variable-name};
+
+      #{$variable-name}: light-dark(
+        var(--tone-#{$tone-name}-#{$light-tone-step}),
+        var(--tone-#{$tone-name}-#{$dark-tone-step})
+      );
+    }
+  } @else {
+    @each $config in $configs {
+      $semantic-name: map.get($config, 'semanticName');
+      $tone-name: map.get($config, 'toneName');
+
+      @each $a-pair in $pairs {
+        $prefix: map.get($a-pair, 'prefix');
+
+        @if not $prefix {
+          $prefix: '';
+        }
+
+        $suffix: map.get($a-pair, 'suffix');
+
+        @if not $suffix {
+          $suffix: '';
+        }
+
+        $step-pair: map.get($a-pair, 'stepPair');
+        $light-tone-step: list.nth($step-pair, 1);
+        $dark-tone-step: list.nth($step-pair, 2);
+        $variable-name: #{$semantic-name};
+
+        @if $prefix != '' {
+          $variable-name: #{$prefix}-#{$variable-name};
+        }
+
+        @if $suffix != '' {
+          $variable-name: #{$variable-name}-#{$suffix};
+        }
+
+        $variable-name: --#{$variable-name};
+
+        #{$variable-name}: light-dark(
+          var(--tone-#{$tone-name}-#{$light-tone-step}),
+          var(--tone-#{$tone-name}-#{$dark-tone-step})
+        );
+      }
+    }
+  }
+}
+
+:root {
+  color-scheme: light dark;
+
+  @include perceptone.generatePerceptone(
+    (
+      'hue': 30,
+      'toneName': 'red'
+    )
+  );
+  @include perceptone.generatePerceptone(
+    (
+      'hue': 150,
+      'toneName': 'green'
+    )
+  );
+  @include perceptone.generatePerceptone(
+    (
+      'hue': 270,
+      'toneName': 'blue'
+    )
+  );
+  @include perceptone.generatePerceptone(
+    (
+      'hue': 0,
+      'chromaPeak': 0,
+      'lightnessAtChromaPeak': 0,
+      'toneName': 'neutral'
+    )
+  );
+  @include generateSematicTones($surface);
+  @include generateSematicTones($outline);
+  @include generateSematicTones($chromatics);
+}

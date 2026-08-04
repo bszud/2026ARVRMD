@@ -1,0 +1,18 @@
+.about-hero-graphic {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+.about-hero-graphic img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  display: block;
+}
+@media (max-width: 48rem) {
+  .about-hero-graphic {
+    padding: 1.5rem 0;
+  }
+}/*# sourceMappingURL=about.css.map */

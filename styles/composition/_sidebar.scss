@@ -1,0 +1,45 @@
+%left {
+  flex-grow: 1;
+  flex-basis: var(--sidebar-target-width, 20rem);
+}
+
+%right {
+  flex-grow: 999;
+  flex-basis: 0;
+  min-inline-size: min(
+    100%,
+    var(--sidebar-content-min-width, calc(50% - 0.5 * var(--g)))
+  );
+}
+
+.sidebar {
+  --g: var(--sidebar-space, var(--space-s-l, 1rem));
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--g);
+
+  &:not([data-direction]) {
+    > :first-child {
+      @extend %left;
+    }
+
+    > :last-child {
+      @extend %right;
+    }
+  }
+
+  &[data-direction='rtl'] {
+    > :last-child {
+      @extend %left;
+    }
+
+    > :first-child {
+      @extend %right;
+    }
+  }
+
+  &[data-reversed] {
+    flex-direction: row-reverse;
+  }
+}

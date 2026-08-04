@@ -1,0 +1,81 @@
+@use "./global/base";
+
+@use "./composition/flow";
+@use "./composition/grid";
+
+@use "./components/link";
+@use "./components/mainheader";
+@use "./components/pageheader";
+@use "./components/sidebar";
+@use "./components/intro";
+@use "./components/text";
+@use "./components/image";
+@use "./components/works-grid";
+@use "./components/designers-grid";
+@use "./components/works-detail";
+@use "./components/designers-detail";
+@use "./components/about";
+
+@use "../node_modules/utopia-core-scss/src/utopia" as utopia;
+
+@font-face {
+  font-family: "Pretendard Variable";
+  src: url("../asset/fonts/PretendardVariable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+body {
+  background: oklch(100% 0.00011 271.152);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.section {
+  font-size: var(--step-4);
+
+  > *:not(h1, h2, h3, h4, h5, h6) {
+    font-size: var(--step-0);
+  }
+
+  &__list {
+    & > * {
+      --flow-space: 0.25em;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.home-main-section {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 5.25rem);
+  overflow: hidden;
+  background-color: #ffffff;
+
+  #lottie-container {
+    width: 100%;
+    height: 100%;
+
+    // !important 없이 순수 CSS 규칙으로 완벽 제어
+    svg {
+      display: block; // 인라인 여백 제거
+      width: 100%;    // 부모 너비에 일치
+      height: 100%;   // 부모 높이에 일치
+    }
+  }
+
+  .typing-bar-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+}

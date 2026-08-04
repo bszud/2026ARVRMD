@@ -1,0 +1,27 @@
+@use '../global/config';
+@use 'sass:math';
+
+.grid-wrapper {
+  --p-x: var(--wrapper-padding, var(--space-s-3xl, 1rem));
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start]
+    minmax(0, 1fr)
+    [breakout-start]
+    minmax(0, var(--p-x))
+    [content-start]
+    min(
+      calc(100% - 2 * var(--p-x)),
+      var(--wrapper-max-width, var(--max-content-width, 85rem))
+    )
+    [content-end]
+    minmax(0, var(--p-x))
+    [breakout-end]
+    minmax(0, 1fr)
+    [full-width-end];
+
+  > * {
+    grid-column: content;
+  }
+}

@@ -1,0 +1,12 @@
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--switcher-space, var(--space-s-l, 1rem));
+  align-items: var(--switcher-vertical-alignment, flex-start);
+
+  > * {
+    flex-grow: 1;
+    flex-basis: calc((var(--switcher-target-wrapper-width) - 100%) * 999);
+    max-inline-size: 100%;
+  }
+}

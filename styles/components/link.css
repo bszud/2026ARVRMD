@@ -1,0 +1,43 @@
+.link {
+  width: 100%;
+}
+
+.link ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: azure;
+  font-family: "MuseumClassicMedium", serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+.link ul a {
+  display: block;
+  background-color: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.link ul a:hover {
+  background-color: oklch(95.55% 0.1492 105.2deg);
+  color: oklch(68.08% 0.1923 251.83deg);
+}
+
+.link li {
+  width: 100%;
+  border-bottom: 0.125rem solid oklch(95.55% 0.1492 105.2deg);
+}
+
+.link li:first-child {
+  border-top: 0.125rem solid oklch(95.55% 0.1492 105.2deg);
+}
+
+.link li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-inline-size: var(--wrapper-max-width, 120rem);
+  margin-inline: auto;
+  padding: 1rem 1.375rem;
+  text-align: center;
+}/*# sourceMappingURL=link.css.map */

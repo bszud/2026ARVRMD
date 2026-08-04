@@ -1,0 +1,20 @@
+.about-hero-graphic {
+  width: 100%;
+  display: flex;
+  justify-content: center; // 중앙 정렬
+  align-items: center;
+  padding: 2rem 0;
+
+  img {
+    width: 100%;
+    // 👇 기본 1440px이었던 값을 원하는 크기(예: 1000px, 800px 등)로 줄여보세요!
+    max-width: 1000px; 
+    height: auto;      // 비율 그대로 유지하면서 세로도 자동 조절됨
+    display: block;
+  }
+
+  @media (max-width: 48rem) {
+    padding: 1.5rem 0;
+  }
+
+}

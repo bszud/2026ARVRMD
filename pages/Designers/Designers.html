@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2026ARVRMD</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link rel="stylesheet" href="../../styles/home.css" />
+  </head>
+
+  <body class="page-Designers">
+    <header class="site-pageheader"> 
+
+<div class="logo">
+        <a href="../../index.html">
+          2026 상명대학교<br>AR·VR미디어디자인전공 졸업작품전시
+        </a>
+      </div>
+
+      <nav class="nav">
+        <button type="button" class="menu-toggle-btn">
+      <img src="../../asset/icons/menu.svg" alt="메뉴 열기">
+    </button>
+
+        <ul class="nav-list">
+           <li><a href="../../pages/About/About.html" class="nav-About">About</a></li>
+          <li><a href="../../pages/Works/Works.html" class="nav-Works">Works</a></li>
+          <li><a href="../../pages/Designers/Designers.html" class="nav-Designers">Designers</a></li>
+          <li><a href="../../pages/Archive/Archive.html" class="nav-Archive">Archive</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <script>
+      // 1. 브라우저야, 화면에서 '햄버거 버튼'과 '메뉴판'을 찾아서 기억해줘!
+      const menuBtn = document.querySelector('.menu-toggle-btn');
+      const navList = document.querySelector('.nav-list');
+
+      // 2. 햄버거 버튼에 '클릭(click)' 이벤트가 발생하는지 감시해줘!
+      menuBtn.addEventListener('click', () => {
+        
+        // 3. 버튼이 클릭되면, 메뉴판에 'is-active'라는 이름표를 넣었다 뺐다(toggle) 해줘!
+        navList.classList.toggle('is-active');
+        
+      });
+    </script>
+    
+    <main class="designers-main">
+      <div class="site-container">
+    
+        <div class="designers-grid" id="designersGrid">
+        </div>
+
+      </div> </main>
+    <script src="../../scripts/data.js"></script>
+    
+    <script src="../../scripts/Designers.js"></script>
+
+  </body>
+</html>

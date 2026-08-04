@@ -1,0 +1,175 @@
+.works-wrapper {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: calc(100vh - 5.25rem);
+
+  @media (max-width: 64rem) {
+    padding: 0;
+
+  }
+
+  @media (max-width: 48rem) { // 768px 이하
+    flex-direction: column;    // 좌우 배치를 위아래 배치로 전환
+    height: auto;              // 높이 고정 해제
+    overflow: visible;         
+  }
+}
+
+.works-sidebar {
+  width: 10rem;
+  flex-shrink: 0;
+  position: sticky;
+  top: 5.25rem;
+  height: auto; // 높이 고정 해제
+  padding: 0;
+
+  @media (max-width: 64rem) {
+    width: 12rem;
+  }
+
+  @media (max-width: 48rem) {
+    width: 100%;               
+    height: auto;              
+    padding: 0;                // 💡 피그마 가로 꽉 채우기 위해 0으로 수정!
+    background-color: #ffffff; 
+    border-bottom: 2px solid oklab(71.115% -0.08935 -0.11425); // 💡 아래쪽 경계선 추가
+    
+    position: sticky;
+    top: 5.25rem;                    
+    z-index: 100;              
+
+    // 내부 세로 리스트를 가로형 탭 메뉴로 전환
+    .category-list {
+      display: flex;           // display 활성화
+      flex-direction: row;     // 가로 정렬
+      justify-content: flex-start; // 💡 오른쪽 비는 문제 해결 (균등 분배)
+      align-items: center;
+      width: 100%;             
+      gap: 2rem;                  // 패딩으로 늘릴 거라 간격 초기화
+      overflow-x: auto;        
+      white-space: nowrap;     
+      padding: 0rem 1rem;         // 양 끝단 최소 안전 여백
+    }
+  }
+}
+
+// category-list (기본 PC 스타일)
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 2.875rem 0 0 2.875rem; // 상단 여백 46px, 좌측 여백 46px
+  margin: 0;
+  list-style: none;
+
+  @media (max-width: 64rem) {
+    padding-left: 2.875rem;
+    padding-right: 2.875rem;
+  }
+}
+
+// category-item 스타일
+.category-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: oklab(82.032% 0 -0.00009);
+  font-family: "PretendardVariable";
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  white-space: nowrap;
+
+  .arrow-svg {
+    display: none;
+    margin-right: 0.375rem;
+  }
+
+  &:hover {
+    color: oklab(71.115% -0.08935 -0.11425);
+  }
+
+  &.active {
+    color: oklab(71.115% -0.08935 -0.11425);
+    font-weight: 700;
+
+    .arrow-svg {
+      display: inline-block;
+      path {
+        fill: oklab(71.115% -0.08935 -0.11425);
+      }
+    }
+  }
+
+  // 💡 [제위치 찾음!] 카테고리 아이템 전용 모바일 반응형 블록
+  @media (max-width: 48rem) {
+    flex: 1;                 // 공평하게 꽉 채우기
+    text-align: center;
+    font-size: 1.5rem;       
+    
+    // 💡 피그마 수치 매핑: 상하 20px, 좌우 18px 패딩
+    padding: 1.125rem 0rem; 
+  }
+}
+
+.works-content {
+  flex: 1;                                           
+  padding: 4.0625rem 4.125rem; 
+
+  .works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    column-gap: 4.125rem;                 
+    row-gap: 3rem;                        
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (max-width: 64rem) {
+    padding: 2.5rem 1.5rem;    // 64rem부터 헤더와 일치
+  }
+  
+  @media (max-width: 48rem) {
+    height: auto;             
+    overflow-y: visible;       
+    padding: 2rem 2.875rem;   
+
+    .works-grid {
+      grid-template-columns: 1fr; // 모바일 1열 배치
+      row-gap: 2rem;              
+    }
+  }
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+
+  &.is-hidden {
+    display: none !important;
+  }
+
+  .thumbnail-box {
+    width: 100%;
+    aspect-ratio: 16 / 10;     
+    background-color: #d9d9d9; 
+    margin-bottom: 1.25rem;
+  }
+
+  .work-title {
+    font-family: "PretendardVariable";
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: oklab(22.213% 0 -0.00003); 
+    margin-bottom: 0.3rem;
+  }
+
+  .work-designer {
+    font-family: "PretendardVariable";
+    font-size: 1.125rem;
+    color: #8e8e93;
+  }
+}

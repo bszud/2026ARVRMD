@@ -1,0 +1,9 @@
+@use './reset';
+@use './tone';
+@use './type';
+@use './space';
+
+body {
+  color: var(--on-surface);
+  background-color: var(--surface-1);
+}

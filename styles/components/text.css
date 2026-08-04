@@ -1,0 +1,26 @@
+.page-text {
+  color: oklch(95.55% 0.1492 105.2deg);
+  font-family: "pretendard variable", serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 170%;
+  letter-spacing: -0.56px;
+  padding: 1rem 2.5rem;
+}
+
+.image-item figcaption {
+  font-family: "Pretendard variable", sans-serif;
+  line-height: 150%;
+  font-size: 1rem;
+  padding-top: 0.375rem;
+}
+
+.page-sourcetext {
+  color: oklch(95.55% 0.1492 105.2deg);
+  font-family: "pretendard variable", serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 156%;
+  letter-spacing: -0.56px;
+  padding: 1rem 2.5rem;
+}/*# sourceMappingURL=text.css.map */
