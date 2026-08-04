@@ -53,7 +53,7 @@ const designersData = [
     nameEn: "Seo Dayeon",
     snsLink: "@allyeon_d",
     email: "dayeon1077@daum.net",
-    img: "../../asset/images/Designers/SeoDayeon.jpg"
+    img: "../../asset/images/Designers/SeoDayeon.JPG"
   },
   {
     studentId: "s-08",
@@ -125,7 +125,7 @@ const designersData = [
         nameEn: "Yu Suji", 
         snsLink: "@_stduio__",
         email: "suji72u@gmail.com",
-        img: "../../asset/images/Designers/YuSuji.jpg"
+        img: "../../asset/images/Designers/Yusuji.jpg"
   },
   {
     studentId: "s-17",
@@ -165,7 +165,7 @@ const designersData = [
         nameEn: "Kim DongYeong", 
         snsLink: "https://timehddud01.github.io/KimDongYeong/",
         email: "timehddud@gmail.com",
-        img: "../../asset/images/Designers/KimDongYeong.jpg"
+        img: "../../asset/images/Designers/KimDongyeong.jpg"
   },
   {
     studentId: "s-22",
@@ -221,7 +221,7 @@ const designersData = [
         nameEn: "Kim MinJu", 
         snsLink: "@andmjuju",
         email: "minju8856@naver.com",
-        img: "../../asset/images/Designers/KimMinJu.JPG"
+        img: "../../asset/images/Designers/KimMinju.JPG"
   },
   {
     studentId: "s-29",
@@ -245,7 +245,7 @@ const designersData = [
         nameEn: "Yang Hee Chan", 
         snsLink: "",
         email: "hcshelby5293@gmail.com",
-        img: "../../asset/images/Designers/YangHeeChan.jpg"
+        img: "../../asset/images/Designers/YangHeechan.jpg"
   },
 ]
 
