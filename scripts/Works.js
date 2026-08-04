@@ -39,7 +39,7 @@ function filterWorks(filter) {
     }).join(', ');
     
     grid.innerHTML += `
-      <a href="detail.html?id=${work.id}" class="work-card" data-category="${work.category}">
+      <a href="Detail.html?id=${work.id}" class="work-card" data-category="${work.category}">
         <div class="card-image">
           <img src="https://via.placeholder.com/600x400?text=Work+${work.id}" alt="썸네일"> 
         </div>

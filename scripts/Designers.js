@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // 🎯 [핵심] 우리가 통합 data.js에 적어둔 이름표(studentId, img, nameKo, nameEn)를 정확히 사용합니다!
       const cardHTML = `
-        <a href="detail.html?id=${designer.studentId}" class="designer-card">
+        <a href="Detail.html?id=${designer.studentId}" class="designer-card">
           <div class="profile-img-box">
             <img src="${designer.img}" alt="${designer.nameKo} 프로필">
           </div>

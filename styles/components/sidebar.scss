@@ -17,7 +17,7 @@
 }
 
 .works-sidebar {
-  width: 10rem;
+  width: 12rem;
   flex-shrink: 0;
   position: sticky;
   top: 5.25rem;
@@ -58,7 +58,7 @@
 .category-list {
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 1.125rem;
   padding: 2.875rem 0 0 2.875rem; // 상단 여백 46px, 좌측 여백 46px
   margin: 0;
   list-style: none;
