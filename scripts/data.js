@@ -256,7 +256,7 @@ const globalWorksData = [
     title: "weave", 
     thumbnail: "썸네일경로.jpg",
     descKo: "weave는 온라인의 발달로 긴밀하게 연결되어 있지만 진정한 친밀감은 느끼지 못하는 역설적인 현세대를 위하여, 인간과 인간의 내면을 촘촘하게 연결하여 진정한 연결을 이룬다. 함께 디바이스를 착용하고, 소통하는 과정에서 관계의 친밀도는 디바이스의 움직임과 빛으로 드러나고, 마침내 타인과 진정한 정서적 연결의 순간을 이룬다. 본 프로젝트는 새로운 인간 소통의 방식을 제시하며 연결의 순간 확장되는 유기적인 내면의 흐름을 시각화한다.",
-    descEn: "Despite digital hyper-connection, true intimacy is rare today. 'weave' resolves this paradox by tightly connecting people's inner selves. As users wear the device and interact, their intimacy is revealed through light and movement. By visualizing this expanding inner flow, "weave" presents a novel form of human communication, guiding users toward genuine emotional connection.",
+    descEn: "Despite digital hyper-connection, true intimacy is rare today. 'weave' resolves this paradox by tightly connecting people's inner selves. As users wear the device and interact, their intimacy is revealed through light and movement. By visualizing this expanding inner flow, 'weave' presents a novel form of human communication, guiding users toward genuine emotional connection.",
     teamIds: ["s-01", "s-02", "s-03", "s-04"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }

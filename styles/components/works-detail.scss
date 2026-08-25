@@ -91,17 +91,17 @@
       .project-desc-group {
         display: flex;
         flex-direction: column;
-        gap: 1rem; // 국문과 영문 사이의 간격
+        gap: 2rem; // 국문과 영문 사이의 간격
 
       .project-desc-ko {
-        font-size: 1.25rem; // 원래 설정하셨던 크기 유지
+        font-size: 1.25rem; 
         line-height: 1.6;
         color: oklab(22.213% 0 -0.00003); // 원래 쓰시던 텍스트 컬러 유지
   }
 
       .project-desc-en {
-        font-size: 1rem; // 국문보다 한 스텝 작게
-        line-height: 1.5;
+        font-size: 1.25rem; 
+        line-height: 1.6;
         color: #838383; // 시각적 분리를 위해 차분한 회색 톤 적용
   }
 }
