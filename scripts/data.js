@@ -255,7 +255,8 @@ const globalWorksData = [
     category: "미디어아트",
     title: "weave", 
     thumbnail: "썸네일경로.jpg",
-    description: "weave는 연결 인류 디바이스 weaving을 통해 타인과 진정한 정서적 연결의 순간을 만듭니다. 직물을 직조하는 것처럼 인간과 인간의 내면은 촘촘하게 연결되며, 인류는 새로운 소통 방식을 마주합니다. 연결의 순간 확장되는 유기적인 내면의 흐름을 시각화합니다.", 
+    descKo: "weave는 온라인의 발달로 긴밀하게 연결되어 있지만 진정한 친밀감은 느끼지 못하는 역설적인 현세대를 위하여, 인간과 인간의 내면을 촘촘하게 연결하여 진정한 연결을 이룬다. 함께 디바이스를 착용하고, 소통하는 과정에서 관계의 친밀도는 디바이스의 움직임과 빛으로 드러나고, 마침내 타인과 진정한 정서적 연결의 순간을 이룬다. 본 프로젝트는 새로운 인간 소통의 방식을 제시하며 연결의 순간 확장되는 유기적인 내면의 흐름을 시각화한다.",
+    descEn: "Despite digital hyper-connection, true intimacy is rare today. 'weave' resolves this paradox by tightly connecting people's inner selves. As users wear the device and interact, their intimacy is revealed through light and movement. By visualizing this expanding inner flow, "weave" presents a novel form of human communication, guiding users toward genuine emotional connection.",
     teamIds: ["s-01", "s-02", "s-03", "s-04"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -264,7 +265,8 @@ const globalWorksData = [
     category: ["VR", "게임"],
     title: "비공개 채용시험", 
     thumbnail: "썸네일경로.jpg",
-    description: "",
+    descKo: "",
+    descEn: "", 
     teamIds: ["s-05", "s-06", "s-07", "s-08"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -273,7 +275,8 @@ const globalWorksData = [
     category: "게임",
     title: "종착역", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "",
+    descEn: "",
     teamIds: ["s-05"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -282,7 +285,8 @@ const globalWorksData = [
     category: ["VR", "게임"],
     title: "現現 | 현현", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "",
+    descEn: "",
     teamIds: ["s-09", "s-10"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -291,7 +295,8 @@ const globalWorksData = [
     category: "미디어아트",
     title: "MODIKIT", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "",
+    descEn: "",
     teamIds: ["s-11", "s-12"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -300,7 +305,8 @@ const globalWorksData = [
     category: ["VR", "게임"],
     title: "현실이행관리국 : 현동모텔", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "",
+    descEn: "", 
     teamIds: ["s-13", "s-14", "s-15"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -309,7 +315,8 @@ const globalWorksData = [
     category: "게임",
     title: "REVERB", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "",
+    descEn: "",
     teamIds: ["s-15"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -318,7 +325,8 @@ const globalWorksData = [
     category: "미디어",
     title: "눌러봄의 반향", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "",
+    descEn: "", 
     teamIds: ["s-16"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -327,7 +335,8 @@ const globalWorksData = [
     category: "게임",
     title: "mnemonic", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "",
+    descEn: "",
     teamIds: ["s-13"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -336,16 +345,8 @@ const globalWorksData = [
     category: ["VR", "게임"],
     title: "JOYKIT", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
-    teamIds: ["s-17"],
-    images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
-  }
-  ,{
-    id: 11, 
-    category: ["VR", "게임"],
-    title: "견물생심", 
-    thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "",
+    descEn: "",
     teamIds: ["s-18"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -354,7 +355,8 @@ const globalWorksData = [
     category: "영상",
     title: "Kael: The Last of the Tribe", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "",
+    descEn: "",
     teamIds: ["s-19"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -363,7 +365,8 @@ const globalWorksData = [
     category: ["VR", "게임"],
     title: "미환: 未還", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "",
+    descEn: "",
     teamIds: ["s-20"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -372,7 +375,8 @@ const globalWorksData = [
     category: "VR",
     title: "덜컹거리며 달리는 전철 속에 서서 나는 어디쯤에선가", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "",
+    descEn: "",
     teamIds: ["s-21"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -381,7 +385,8 @@ const globalWorksData = [
     category: ["VR", "게임"],
     title: "프레시폴 (FreshFall)", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "",
+    descEn: "",
     teamIds: ["s-22", "s-23", "s-24", "s-25"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -390,7 +395,8 @@ const globalWorksData = [
     category: "게임",
     title: "LINK", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "",
+    descEn: "",
     teamIds: ["s-26"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -399,7 +405,8 @@ const globalWorksData = [
     category: "미디어아트",
     title: "쌀콩밀", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "이 프로젝트는 아시아 식문화 속 쌀·콩·밀이 지나온 길을 따라 음식에 담긴 이동의 이야기를 탐구합니다. 식재료는 국경을 넘어 사람과 문화를 만나 새로운 음식으로 변화하며 아시아를 연결해 왔습니다. 익숙한 한 끼에 스며든 교역과 교류의 흔적을 따라가며, 식재료가 품은 시간과 문화의 가치, 그리고 보이지 않는 연결망을 새롭게 바라보는 경험을 제안합니다.",
+    descEn: "This project explores the stories of movement embedded in food by tracing the journeys of rice, soybeans, and wheat across Asia. As these ingredients crossed borders, they encountered new cultures and evolved into diverse cuisines. By revealing the traces of trade, migration, and cultural exchange hidden in everyday meals, the project invites viewers to rediscover the value of ingredients and the invisible connections they create.",
     teamIds: ["s-27", "s-28", "s-29"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -408,7 +415,8 @@ const globalWorksData = [
     category: "영상",
     title: "BIOMEMO", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "",
+    descEn: "",
     teamIds: ["s-30"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }
@@ -417,7 +425,8 @@ const globalWorksData = [
     category: "미디어아트",
     title: "RUNTIME", 
     thumbnail: "썸네일경로.jpg",
-    description: "", 
+    descKo: "",
+    descEn: "",
     teamIds: ["s-31"],
     images: ["상세이미지1.jpg", "상세이미지2.jpg"], 
   }

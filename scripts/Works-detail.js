@@ -20,7 +20,11 @@ if (targetWork) {
   
   document.querySelector('.project-category').textContent = categoryText;
   document.querySelector('.project-title').textContent = targetWork.title;
-  document.querySelector('.project-desc').textContent = targetWork.description;
+  const descKoEl = document.querySelector('.project-desc-ko');
+if(descKoEl) descKoEl.textContent = targetWork.descKo || "";
+
+const descEnEl = document.querySelector('.project-desc-en');
+if(descEnEl) descEnEl.textContent = targetWork.descEn || "";
 
   // 2️⃣ 하단: Designers 프로필 상세 리스트 렌더링
   const teamList = document.querySelector('.team-list');
