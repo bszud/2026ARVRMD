@@ -68,7 +68,7 @@
 .page-Detail .detail-main-wrapper .detail-info-side .project-desc-group {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1.8rem;
 }
 .page-Detail .detail-main-wrapper .detail-info-side .project-desc-group .project-desc-ko {
   font-size: 1.25rem;
