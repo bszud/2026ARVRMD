@@ -178,28 +178,30 @@
     } // 👈 1. 왼쪽 정보 영역(.detail-info-side) 끝
 
 
-    // 👉 2. 오른쪽 미디어 영역 시작
     .detail-media-side {
+  // ... (기존 width, padding 등의 설정은 그대로 유지)
+  display: flex;
+  flex-direction: column;
+  gap: 0; // 🎯 상자 간격 0 확인
+
+  .image-box {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 0;     // 🎯 유령 여백 원천 차단
+    line-height: 0;   // 🎯 줄간격 여백 원천 차단
+    background-color: transparent; // 고정 비율 찌꺼기 노출 방지
+
+    img {
       width: 100%;
-      max-width: 844px;
-      // 🎯 오른쪽 영역만의 패딩을 새로 부여합니다. (왼쪽 2rem 패딩이 합쳐져 기존의 4rem 간격을 만듭니다)
-      padding: 4rem 2.875rem 4rem 2rem; 
-      display: flex;
-      flex-direction: column;
-      gap: 2rem; 
-
-      .image-box {
-        width: 100%;
-        background-color: #f0f0f0; 
-        
-        img {
-          width: 100%;
-          height: auto;
-          display: block; 
-        }
-      }
-    } // 👈 2. 오른쪽 미디어 영역 끝
-
+      height: auto;
+      display: block;         // 🎯 인라인 여백을 제거하고 부모 상자를 꽉 채움[cite: 2]
+      vertical-align: top;    // 🎯 미세하게 남는 하단 틈새까지 완벽히 박멸
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
 
     // 📱 3. 모바일/태블릿 환경 변신!
     @media (max-width: 62rem) {

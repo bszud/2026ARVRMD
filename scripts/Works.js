@@ -22,26 +22,29 @@ function filterWorks(filter) {
   // ① 일단 바구니(그리드)를 싹 비웁니다.
   grid.innerHTML = ''; 
 
-  // ② 전체(all)면 보따리 전체를, 아니면 선택한 카테고리만 골라냅니다.
-  // (category가 배열일 경우 includes가 완벽하게 작동합니다!)
+  // ② 카테고리 필터링 (배열이 아닐 경우를 대비한 튼튼한 방어막 추가)
   const filteredData = filter === 'all' 
     ? worksData 
-    : worksData.filter(work => work.category.includes(filter));
+    : worksData.filter(work => {
+        const cat = Array.isArray(work.category) ? work.category : [work.category];
+        return cat.includes(filter);
+    });
 
   // ③ 골라낸 데이터들을 HTML로 만들어서 바구니에 차곡차곡 넣습니다.
   filteredData.forEach(work => {
     
-    // 🎯 [핵심 수정!] teamIds를 이용해 designersData 창고에서 학생 이름 찾아오기!
-    const authorsString = work.teamIds.map(id => {
-      // designersData에서 studentId가 일치하는 학생을 찾습니다.
+    // 🎯 [안전장치] teamIds를 빼먹은 데이터가 있어도 에러가 나지 않도록 빈 배열([]) 처리
+    const safeTeamIds = work.teamIds || [];
+    const authorsString = safeTeamIds.map(id => {
       const student = designersData.find(designer => designer.studentId === id);
-      return student ? student.nameKo : "이름 없음"; // 혹시 아이디를 잘못 적었을 경우를 대비한 안전장치
+      return student ? student.nameKo : "이름 없음"; 
     }).join(', ');
     
     grid.innerHTML += `
       <a href="Detail.html?id=${work.id}" class="work-card" data-category="${work.category}">
         <div class="card-image">
-          <img src="https://via.placeholder.com/600x400?text=Work+${work.id}" alt="썸네일"> 
+          <!-- 🎯 임시 가짜 이미지를 지우고, data.js에 적은 진짜 썸네일로 교체! -->
+          <img src="${work.thumbnail}" alt="${work.title} 썸네일"> 
         </div>
         <div class="card-info">
           <h3 class="title">${work.title}</h3>
