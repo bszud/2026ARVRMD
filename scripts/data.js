@@ -273,10 +273,10 @@ const globalWorksData = [
  ,{ 
     id: 3, 
     category: "게임",
-    title: "종착역", 
+    title: "한 해를 마무리하고 소원 등불을 올려보세요", 
     thumbnail: "../../asset/images/Works/works_choiseungjoo_00.jpg",
-    descKo: "졸업을 앞둔 우리의 대학 생활, 그 종착역이 되는 2026년을 돌아보며 한 해를 마무리한다. 지나온 시간을 되새기며 각자의 등불을 만들고, 앞으로 이루고 싶은 바람과 소원을 담아 하늘로 띄워 보낸다.",
-    descEn: "As we approach graduation, we look back on 2026—the final stop of our university journey. Reflecting on the time we have shared, we create our own lanterns and send them into the sky, carrying our hopes and wishes for the future.",
+    descKo: "졸업을 앞둔 우리의 대학 생활, 그 마지막역이 되는 2026년을 돌아보며 한 해를 마무리한다. 지나온 시간을 되새기며 각자의 등불을 만들고, 앞으로 이루고 싶은 바람과 소원을 담아 하늘로 띄워 보낸다.",
+    descEn: "As we approach graduation, we look back on 2026—the final stop in our university journey—and bring the year to a close. Reflecting on the moments we have shared, we create our own lanterns, fill them with our hopes and wishes for the future, and release them into the sky.",
     teamIds: ["s-05"],
     images: ["../../asset/images/Works/works_choiseungjoo_01.jpg", "../../asset/images/Works/works_choiseungjoo_02.jpg", "../../asset/images/Works/works_choiseungjoo_03.jpg", "../../asset/images/Works/works_choiseungjoo_04.jpg", "../../asset/images/Works/works_choiseungjoo_05.jpg",], 
   }
