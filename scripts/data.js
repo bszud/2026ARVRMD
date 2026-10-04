@@ -328,7 +328,7 @@ const globalWorksData = [
     descKo: "이 작품은 소셜미디어 추천 알고리즘을 통해 인식이 편향되어가는 과정과 반응을 탐구한다. 세가지 사 회문제에서 수집한 이미지 45장은 관람객의 선택에 따라 연결되며, 선택지는 점차 줄어든다. 이 체험 은 개인의 반응이 반영되어 편향된 세계를 만드는 구조를 드러내고, 우리가 접하는 정보와 믿음이 어 떻게 구성되는지 질문한다.",
     descEn: "This work explores how perception becomes increasingly biased through social media recommendation algorithms. Forty-five images collected around three social issues are connected according to the viewer's choices, while the range of available options gradually narrows.", 
     teamIds: ["s-16"],
-    images: ["../../asset/images/Works/works_suji_00.jpg"]
+    images: ["../../asset/images/Works/works_suji_01.jpg", "../../asset/images/Works/works_suji_02.jpg"]
   }
   ,{
     id: 9, 
