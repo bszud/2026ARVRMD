@@ -7,6 +7,7 @@
   align-items: center;
   min-height: 100vh;
   margin: 0;
+  padding: 2rem 1.5rem;
 }
 
 /* 📱 모바일 기본: 화면 꽉 채우기 */
@@ -14,6 +15,8 @@
   width: 100%;
   max-width: 48rem;
   background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -92,7 +95,7 @@
 .invite-content .invite-footer .info-group1 {
   font-family: "Pretendard Variable", sans-serif;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 620;
   line-height: 1.3;
   color: oklab(71.115% -0.08935 -0.11425);
 }
