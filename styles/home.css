@@ -1575,7 +1575,7 @@ body {
   max-width: 48rem;
   background-color: #ffffff;
   border-radius: 24px;
-  box-shadow: 0 15px 35px oklab(22.213% 0 -0.00003);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.135);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
