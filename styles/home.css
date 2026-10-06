@@ -1558,6 +1558,131 @@ body {
   }
 }
 
+/* 배경 전체 영역 */
+.page-Invite {
+  background-color: oklab(71.115% -0.08935 -0.11425);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* 📱 모바일 기본: 화면 꽉 채우기 */
+.invite-wrapper {
+  width: 100%;
+  max-width: 48rem;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  /* 💻 PC/태블릿 (48rem 이상): 390x800 카드 형태로 변신! */
+}
+@media (min-width: 48rem) {
+  .invite-wrapper {
+    max-width: 390px;
+    min-height: 800px;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    overflow: hidden;
+  }
+}
+
+/* 내부 콘텐츠 배치 (Flexbox를 활용해 위, 중간, 아래를 균형있게 분배) */
+.invite-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  padding: 3rem 1.5rem;
+  gap: 2rem;
+  /* 상단 텍스트 */
+}
+.invite-content .invite-header {
+  text-align: center;
+}
+.invite-content .invite-header .subtitle {
+  font-family: "Pretendard Variable", sans-serif;
+  font-size: 18px;
+  color: #838383;
+  margin-bottom: 0.5rem;
+}
+.invite-content .invite-header .title {
+  font-family: "Pretendard Variable", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: oklab(22.213% 0 -0.00003);
+  line-height: 1.4;
+  margin: 0;
+}
+.invite-content {
+  /* 중단 그래픽 (남는 공간을 최대한 차지하도록 flex: 1 부여) */
+}
+.invite-content .invite-graphic {
+  width: 100%;
+  aspect-ratio: 3/4;
+  flex-shrink: 0;
+  background-color: #eeeeee;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.invite-content .invite-graphic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.invite-content {
+  /* 하단 정보 및 버튼 */
+}
+.invite-content .invite-footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.invite-content .invite-footer .info-group1 {
+  font-family: "Pretendard Variable", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: oklab(22.213% 0 -0.00003);
+}
+.invite-content .invite-footer .info-group1 p {
+  margin: 0.2rem 0;
+}
+.invite-content .invite-footer .info-group2 {
+  font-family: "Pretendard Variable", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: oklab(22.213% 0 -0.00003);
+}
+.invite-content .invite-footer .info-group2 p {
+  margin: 0.2rem 0;
+}
+.invite-content .invite-footer .enter-btn {
+  display: block;
+  width: 100%;
+  padding: 1.25rem;
+  background-color: oklab(71.115% -0.08935 -0.11425);
+  color: #ffffff;
+  font-family: "Pretendard Variable", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.invite-content .invite-footer .enter-btn:hover {
+  opacity: 0.8;
+}
+
 @font-face {
   font-family: "Pretendard Variable";
   src: url("../asset/fonts/PretendardVariable.woff2") format("woff2");
