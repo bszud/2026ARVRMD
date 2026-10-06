@@ -15,7 +15,7 @@
   max-width: 48rem; // 기존 프로젝트의 모바일 한계선 유지
   background-color: #ffffff;
   border-radius: 24px; // 💡 모바일에도 둥근 모서리 짠!
-  box-shadow: 0 15px 35px oklab(22.213% 0 -0.00003);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
