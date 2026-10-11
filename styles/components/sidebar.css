@@ -74,7 +74,7 @@
   align-items: center;
   justify-content: flex-start;
   color: oklab(82.032% 0 -0.00009);
-  font-family: "PretendardVariable";
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 1.75rem;
   font-weight: 600;
   text-decoration: none;
@@ -152,14 +152,14 @@
   margin-bottom: 1.25rem;
 }
 .work-card .work-title {
-  font-family: "PretendardVariable";
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: oklab(22.213% 0 -0.00003);
   margin-bottom: 0.3rem;
 }
 .work-card .work-designer {
-  font-family: "PretendardVariable";
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 1.125rem;
   color: #8e8e93;
 }/*# sourceMappingURL=sidebar.css.map */
