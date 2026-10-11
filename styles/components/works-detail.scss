@@ -73,6 +73,7 @@
       flex-shrink: 0; 
 
       .project-title {
+        font-family: "Pretendard Variable", sans-serif;
         font-size: 3.5rem;
         font-weight: 700;
         line-height: 1.1;
@@ -81,6 +82,7 @@
       }
 
       .project-category {
+        font-family: "Pretendard Variable", sans-serif;
         font-size: 1.5rem;
         color: oklab(60.999% 0 -0.00007); 
         font-weight: 700;
@@ -94,12 +96,14 @@
         gap: 1.8rem; // 국문과 영문 사이의 간격
 
       .project-desc-ko {
+        font-family: "Pretendard Variable", sans-serif;
         font-size: 1.25rem; 
         line-height: 1.6;
         color: oklab(22.213% 0 -0.00003); // 원래 쓰시던 텍스트 컬러 유지
   }
 
       .project-desc-en {
+        font-family: "Pretendard Variable", sans-serif;
         font-size: 1.25rem; 
         line-height: 1.6;
         color: #838383; // 시각적 분리를 위해 차분한 회색 톤 적용
@@ -116,6 +120,7 @@
         }
 
         .team-heading {
+          font-family: "Pretendard Variable", sans-serif;
           font-size: 1.125rem;
           font-weight: 700;
           color: oklab(22.213% 0 -0.00003);
@@ -147,12 +152,14 @@
                 gap: 0.5rem;
 
                 .name-ko {
+                  font-family: "Pretendard Variable", sans-serif;
                   font-size: 1.25rem;
                   font-weight: 600;
                   color: oklab(22.213% 0 -0.00003);
                 }
 
                 .name-en {
+                  font-family: "Pretendard Variable", sans-serif;
                   font-size: 1.25rem;
                   font-weight: 600;
                   color: oklab(60.999% 0 -0.00007);
@@ -161,12 +168,14 @@
               }
 
               .member-id {
+                font-family: "Pretendard Variable", sans-serif;
                 font-size: 1.25rem;
                 font-weight: 600;
                 color: oklab(22.213% 0 -0.00003);
               }
 
               .member-email {
+                font-family: "Pretendard Variable", sans-serif;
                 font-size: 1.25rem;
                 font-weight: 600;
                 color: oklab(22.213% 0 -0.00003);
