@@ -1,3 +1,51 @@
+// 1. 전체 래퍼 (사이드바 + 콘텐츠)
+.works-wrapper {
+  display: flex;
+  align-items: flex-start; // 사이드바 sticky가 동작하려면 flex-start 유지
+  width: 100%;
+  min-height: calc(100vh - 5.25rem);
+
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+// 2. 우측 콘텐츠 영역
+.works-content {
+  flex: 1;
+  width: 100%;
+  padding: 2.875rem;
+
+  @media (max-width: 64rem) {
+    padding: 2.5rem;
+  }
+
+  @media (max-width: 48rem) {
+    padding: 2rem 1.5rem;
+  }
+
+  // 3. 작품 그리드
+  .works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 22px;
+    row-gap: 56px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    @media (max-width: 64rem) {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+      row-gap: 4rem;
+    }
+  }
+}
+
+// 4. 작품 카드 (Works.js가 만드는 HTML 클래스와 일치)
 .work-card {
   display: flex;
   flex-direction: column;
@@ -5,10 +53,16 @@
   cursor: pointer;
   text-decoration: none;
 
-  .thumbnail-box {            // ← .card-image에서 변경
+  &.is-hidden {
+    display: none !important;
+  }
+
+  // 썸네일
+  .thumbnail-box {
     width: 100%;
     aspect-ratio: 16 / 10;
     background-color: #f0f0f0;
+    overflow: hidden;
 
     img {
       width: 100%;
@@ -18,12 +72,13 @@
     }
   }
 
+  // 텍스트 정보
   .card-info {
     display: flex;
     flex-direction: column;
     gap: 0;
 
-    .work-title {             // ← .title에서 변경
+    .work-title {
       font-family: "Pretendard Variable", sans-serif;
       font-size: 1.75rem;
       font-weight: 700;
@@ -33,7 +88,7 @@
       word-break: keep-all;
     }
 
-    .work-designer {          // ← .author에서 변경
+    .work-designer {
       font-family: "Pretendard Variable", sans-serif;
       font-size: 1.125rem;
       color: oklab(60.999% 0 -0.00007);
