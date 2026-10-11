@@ -69,6 +69,7 @@
   gap: 0;
 }
 .work-card .card-info .title {
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
   color: #1b1b1b;
@@ -77,6 +78,7 @@
   word-break: keep-all;
 }
 .work-card .card-info .author {
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 1.125rem;
   color: oklab(60.999% 0 -0.00007);
   margin: 0;

@@ -1053,6 +1053,7 @@ body {
   gap: 0;
 }
 .work-card .card-info .title {
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
   color: #1b1b1b;
@@ -1061,6 +1062,7 @@ body {
   word-break: keep-all;
 }
 .work-card .card-info .author {
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 1.125rem;
   color: oklab(60.999% 0 -0.00007);
   margin: 0;
@@ -1189,6 +1191,7 @@ body {
   flex-shrink: 0;
 }
 .page-Detail .detail-main-wrapper .detail-info-side .project-title {
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.1;
@@ -1196,6 +1199,7 @@ body {
   color: oklab(22.213% 0 -0.00003);
 }
 .page-Detail .detail-main-wrapper .detail-info-side .project-category {
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 1.5rem;
   color: oklab(60.999% 0 -0.00007);
   font-weight: 700;
@@ -1207,11 +1211,13 @@ body {
   gap: 1.8rem;
 }
 .page-Detail .detail-main-wrapper .detail-info-side .project-desc-group .project-desc-ko {
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 1.25rem;
   line-height: 1.6;
   color: oklab(22.213% 0 -0.00003);
 }
 .page-Detail .detail-main-wrapper .detail-info-side .project-desc-group .project-desc-en {
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 1.25rem;
   line-height: 1.6;
   color: #838383;
@@ -1226,6 +1232,7 @@ body {
   margin-bottom: 1.5rem;
 }
 .page-Detail .detail-main-wrapper .detail-info-side .project-team-section .team-heading {
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   color: oklab(22.213% 0 -0.00003);
@@ -1256,22 +1263,26 @@ body {
   gap: 0.5rem;
 }
 .page-Detail .detail-main-wrapper .detail-info-side .project-team-section .team-list .team-member .member-info .member-name-group .name-ko {
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   color: oklab(22.213% 0 -0.00003);
 }
 .page-Detail .detail-main-wrapper .detail-info-side .project-team-section .team-list .team-member .member-info .member-name-group .name-en {
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   color: oklab(60.999% 0 -0.00007);
   margin-bottom: 0.1rem;
 }
 .page-Detail .detail-main-wrapper .detail-info-side .project-team-section .team-list .team-member .member-info .member-id {
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   color: oklab(22.213% 0 -0.00003);
 }
 .page-Detail .detail-main-wrapper .detail-info-side .project-team-section .team-list .team-member .member-info .member-email {
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   color: oklab(22.213% 0 -0.00003);
@@ -1721,6 +1732,7 @@ body {
 
 body {
   background: oklch(100% 0.00011 271.152deg);
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
 }
 
 ul,

@@ -41,7 +41,7 @@ function filterWorks(filter) {
     }).join(', ');
     
     grid.innerHTML += `
-      <a href="Works-detail.html?id=${work.id}" class="work-card" data-category="${work.category}">
+      <a href="Detail.html?id=${work.id}" class="work-card" data-category="${work.category}">
         <div class="thumbnail-box">
           <!-- 🎯 임시 가짜 이미지를 지우고, data.js에 적은 진짜 썸네일로 교체! -->
           <img src="${work.thumbnail}" alt="${work.title} 썸네일"> 
