@@ -41,14 +41,14 @@ function filterWorks(filter) {
     }).join(', ');
     
     grid.innerHTML += `
-      <a href="Detail.html?id=${work.id}" class="work-card" data-category="${work.category}">
-        <div class="card-image">
+      <a href="Works-detail.html?id=${work.id}" class="work-card" data-category="${work.category}">
+        <div class="thumbnail-box">
           <!-- 🎯 임시 가짜 이미지를 지우고, data.js에 적은 진짜 썸네일로 교체! -->
           <img src="${work.thumbnail}" alt="${work.title} 썸네일"> 
         </div>
         <div class="card-info">
-          <h3 class="title">${work.title}</h3>
-          <p class="author">${authorsString}</p> 
+          <h3 class="work-title">${work.title}</h3>
+          <p class="work-designer">${authorsString}</p> 
         </div>
       </a>
     `;
