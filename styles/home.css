@@ -1597,7 +1597,7 @@ body {
 .invite-content .invite-header .title {
   font-family: "Pretendard Variable", sans-serif;
   font-size: 1.375rem;
-  font-weight: 600;
+  font-weight: 650;
   color: lab(100% 0.01 -0.01);
   line-height: 1.6;
   margin: 0;
