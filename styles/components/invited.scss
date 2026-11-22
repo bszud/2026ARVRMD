@@ -1,25 +1,28 @@
+/* 초대장 좌우 여백: 헤더와 본문이 같이 씀 (반드시 파일 맨 위, 중괄호 밖) */
+$invite-side: 24px;
+
 /* 배경 전체 영역 */
 .page-Invite {
-  background-color: oklab(71.115% -0.08935 -0.11425); // PC에서 열었을 때 보이는 배경색
+  background-color: oklab(71.115% -0.08935 -0.11425);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  padding: 2rem 1.5rem;
+  padding: 0;
 }
 
 /* 📱 모바일 기본: 화면 꽉 채우기 */
 .invite-wrapper {
   width: 100%;
-  max-width: 48rem; // 기존 프로젝트의 모바일 한계선 유지
+  max-width: 48rem;
   background-color: oklab(71.115% -0.08935 -0.11425);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
 
-  /* 💻 PC/태블릿 (48rem 이상): 390x800 카드 형태로 변신! */
+  /* 💻 PC/태블릿 (48rem 이상): 390x800 카드 형태 */
   @media (min-width: 48rem) {
     max-width: 390px;
     min-height: 800px;
@@ -29,18 +32,58 @@
   }
 }
 
-/* 내부 콘텐츠 배치 (Flexbox를 활용해 위, 중간, 아래를 균형있게 분배) */
+/* 초대장 장식 헤더 */
+.invite-topbar {
+  display: flex;
+  justify-content: space-between; // 텍스트 ↔ 로고 묶음 양끝 정렬
+  align-items: center;
+  height: 84px;
+  padding: 20px $invite-side;
+  background-color: oklab(71.115% -0.08935 -0.11425);
+  box-sizing: border-box;
+
+  /* 왼쪽 문구 */
+  .topbar-title {
+    margin: 0;
+    color: oklab(100% 0 -0.00011);
+    font-family: "Pretendard Variable", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 144%;
+    white-space: nowrap;
+    opacity: 0.6;
+  }
+
+  /* 오른쪽 로고 묶음 */
+  .topbar-logos {
+    display: flex;
+    align-items: center; // 로고끼리 세로 가운데 맞춤
+    gap: 16px;            // 추가: 로고 사이 간격
+    flex-shrink: 0;      // 공간이 좁아도 로고 묶음이 찌그러지지 않게
+  }
+
+  /* 각 로고 */
+  .topbar-logo {
+    display: block;
+    width: 24px;
+    height: auto;
+    opacity: 0.6;
+  }
+}
+
+/* 내부 콘텐츠 배치 */
 .invite-content {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   min-height: 100%;
-   padding: 3rem 1.5rem; // 안전 여백
-   gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  padding: 3rem $invite-side;
+  gap: 2rem;
 
   /* 상단 텍스트 */
   .invite-header {
     text-align: center;
+
     .subtitle {
       font-family: "Pretendard Variable", sans-serif;
       font-size: 18px;
@@ -48,6 +91,7 @@
       font-weight: 500;
       margin-bottom: 0.5rem;
     }
+
     .title {
       font-family: "Pretendard Variable", sans-serif;
       font-size: 1.375rem;
@@ -58,37 +102,32 @@
     }
   }
 
-  /* 중단 그래픽 (남는 공간을 최대한 차지하도록 flex: 1 부여) */
+  /* 중단 그래픽: 이미지 원본 비율 그대로 */
   .invite-graphic {
-  width: 100%;
-  aspect-ratio: 3 / 4; // 👈 상자 모양을 1080x1440 원본 비율인 3:4로 튼튼하게 고정합니다![cite: 3]
-  flex-shrink: 0;
-  background-color: #eeeeee;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-
-  img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 0px;
+    overflow: hidden;
+
+    img {
+      display: block; // 추가: 이미지 아래 빈틈 제거
+      width: 100%;
+      height: auto;   // 변경: 100% → auto
+    }
   }
-}
 
   /* 하단 정보 및 버튼 */
   .invite-footer {
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem; // 섹션 사이 간격
+    gap: 2.5rem;
 
     .info-section {
       font-family: "Pretendard Variable", sans-serif;
       color: oklab(100% 0 -0.00011);
 
-      /* ① 부제목 (가위, 바위, 보 / 전시기간 / 전시장소) */
+      /* ① 부제목 */
       .info-title {
         font-size: 1.25rem;
         font-weight: 600;
@@ -96,7 +135,7 @@
         margin: 0 0 0.8rem;
       }
 
-      /* ② 본문 전체 (설명 문단 + 기간 + 장소) */
+      /* ② 본문 전체 */
       p {
         font-size: 1rem;
         font-weight: 400;
@@ -104,9 +143,8 @@
         margin: 0.2rem 0;
       }
 
-      /* ③ 긴 설명 문단: 정렬/간격만 담당 */
+      /* ③ 긴 설명 문단 간격 */
       .info-desc {
-
         & + .info-desc {
           margin-top: 0.8rem;
         }
@@ -118,14 +156,14 @@
       width: 100%;
       padding: 1.25rem;
       margin-top: 1rem;
-      background-color: oklab(100% 0 -0.00011); // 메인 블루 컬러
+      background-color: oklab(100% 0 -0.00011);
       color: rgb(0, 176, 236);
       font-family: "Pretendard Variable", sans-serif;
       font-size: 1.25rem;
       font-weight: 700;
       border-radius: 8px;
       text-decoration: none;
-      text-align: center;     // 버튼 글자 가운데 정렬
+      text-align: center;
       box-sizing: border-box;
     }
   }
